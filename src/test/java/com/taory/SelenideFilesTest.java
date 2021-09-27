@@ -16,8 +16,8 @@ public class SelenideFilesTest {
         String result;
         try (InputStream is = new FileInputStream("src/test/resources/Файл.txt")) {
             result = new String(is.readAllBytes());
+            assertThat(result).contains("Привет!");
         }
-        assertThat(result).contains("Привет!");
     }
 
     @Test
@@ -34,7 +34,6 @@ public class SelenideFilesTest {
             XLS parsed = new XLS(stream);
             assertThat(parsed.excel.getSheetAt(0).getRow(5).getCell(0).getStringCellValue())
                     .isEqualTo("Работа");
-            System.out.println();
         }
     }
 
