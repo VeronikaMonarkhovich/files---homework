@@ -24,7 +24,7 @@ public class SelenideFilesTest {
     void pdfFileTest() throws Exception {
         try (InputStream stream = getClass().getClassLoader().getResourceAsStream("Файл.pdf")) {
             PDF parsed = new PDF(stream);
-            assertThat(parsed.text).contains("если ранее имели другие фамилию, имя, отчество, укажите их, когда меняли и где");
+            assertThat(parsed.text).contains("ранее имели другие фамилию, имя, отчество, укажите их, когда меняли и где");
         }
     }
 
@@ -44,7 +44,7 @@ public class SelenideFilesTest {
         ZipFile zipFile = new ZipFile(sourcePath);
         if (zipFile.isEncrypted()) {
             zipFile.setPassword(pass.toCharArray());
-            assertThat(zipFile.getFileHeaders().get(0).toString()).contains("1256.txt");
+            assertThat(zipFile.getFileHeaders().get(0).toString()).contains("14256.txt");
         }
     }
 
