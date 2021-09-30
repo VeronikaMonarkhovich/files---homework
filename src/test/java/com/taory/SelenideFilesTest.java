@@ -44,7 +44,7 @@ public class SelenideFilesTest {
         ZipFile zipFile = new ZipFile(sourcePath);
         if (zipFile.isEncrypted()) {
             zipFile.setPassword(pass.toCharArray());
-            assertThat(zipFile.getFileHeaders().get(0).toString()).contains("14256.txt");
+            assertThat(zipFile.getFileHeaders().get(0).toString()).contains("1256.txt");
         }
     }
 
