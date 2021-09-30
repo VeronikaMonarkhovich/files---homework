@@ -5,8 +5,10 @@ import com.codeborne.xlstest.XLS;
 import net.lingala.zip4j.ZipFile;
 import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
 import org.junit.jupiter.api.Test;
+
 import java.io.FileInputStream;
 import java.io.InputStream;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class SelenideFilesTest {
