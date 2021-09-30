@@ -24,7 +24,7 @@ public class SelenideFilesTest {
     void pdfFileTest() throws Exception {
         try (InputStream stream = getClass().getClassLoader().getResourceAsStream("Файл.pdf")) {
             PDF parsed = new PDF(stream);
-            assertThat(parsed.text).contains("ранее имели другие фамилию, имя, отчество, укажите их, когда меняли и где");
+            assertThat(parsed.text).contains("если ранее имели другие фамилию, имя, отчество, укажите их, когда меняли и где");
         }
     }
 
