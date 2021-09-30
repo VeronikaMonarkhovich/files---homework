@@ -56,4 +56,3 @@ public class SelenideFilesTest {
         assertThat(text).contains("Банковские реквизиты и юридический адрес");
     }
 }
-
